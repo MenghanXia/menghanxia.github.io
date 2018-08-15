@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta name="keywords" content="Edge Detection, Line Detection">
+
+    <title>Invertible Grayscale</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+	td {
+	padding-right: 5px;
+	align:center;
+	text-align:center;
+	}
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <!-- Page Content -->
+<!-- =========================================== Content Range =========================================== -->
+<div class="container">
+			<div class="col-lg-12 text-center">
+                <span style="font-size:42px"><b>Invertible Grayscale <font color="red">(In Progress)</font></b></span><br><br>
+				<!--table 1-->
+				<table align="center" width="500px">
+	  			  <tbody><tr>
+	  	              <td align="center" width="140px">
+	  					<center>
+	  						<span style="font-size:18px"><a href="https://menghanxia.github.io/">Menghan Xia*</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="140px">
+	  					<center>
+	  						<span style="font-size:18px"><a href="http://appsrv.cse.cuhk.edu.hk/~xtliu/">Xueting Liu*</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align="center" width="140px">
+	  					<center>
+	  						<span style="font-size:18px"><a href="http://www.cse.cuhk.edu.hk/~ttwong/">Tien-Tsin Wong</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  			  </tr></tbody>
+				</table>
+				<span style="font-size:18px"><i>The Chinsese University of Hong Kong (CUHK), Hong Kong</i></span>
+				<br><br>
+				<!--table 2-->
+				<table align="center" width="800px">
+					<tbody><tr>
+						<td align="center" width="150px">
+	  					<center>
+	  						<span style="font-size:20px">Code <a href="https://github.com/MenghanXia"> [GitHub]</a></span>
+		  		  		</center></td>
+						<td align="center" width="300px">
+	  					<center>
+	  						<span style="font-size:20px">SIGGRAPH Asia 2018<a href="https://github.com/MenghanXia"> [Paper]</a></span>
+		  		  		</center></td>
+						<td align="center" width="200px">
+	  					<center>
+	  						<span style="font-size:20px">Conference<a href="https://github.com/MenghanXia" > [Talk]</a></span>
+						</center></td>
+						<td align="center" width="150px">
+	  					<center>
+	  						<span style="font-size:20px">Slide<a href="https://github.com/MenghanXia"> [ppt]</a></span>
+		  		  		</center></td>
+					</tr></tbody>
+				</table>
+			</div>
+			
+			<!--table 3-->
+			 <table align="center" width="700px">
+				<tbody><tr>
+					<td width="700px">
+  					<center>
+  	                	<img class="rounded" src="./materials/teaser.jpg" height="300px">
+  	                	<br>
+					</center></td>
+  	            </tr></tbody>
+			</table>
+
+<hr>
+<!--section 1-->
+<h2 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
+Abstract</h2>
+<h4 style="text-align:justify">
+<div style="text-indent:2em">
+<p style="line-height:120%">Once a color image is converted to grayscale, it is a common belief that the original color cannot be 
+fully restored, even with the state-of-the-art colorization methods. In this paper, we propose an innovative method to synthesize 
+{\em invertible grayscale}. It is a grayscale image that can fully restore its original color. The key idea here is to encode the 
+original color information into the synthesized grayscale, in a way that users cannot recognize any anomalies. 
+We propose to learn and embed the color-encoding scheme via a convolutional neural network (CNN). It consists of an encoding 
+network to convert a color image to grayscale, and a decoding network to invert the grayscale to color. 
+We then design a loss function to ensure the trained network possesses three required properties: (a) color invertibility, 
+(b) grayscale conformity,  and (c) resistance to quantization error. We have conducted intensive quantitative experiments 
+and user studies over a large amount of color images to validate the proposed method. Regardless of the genre and content 
+of the color input, convincing results are obtained in all cases..</p>
+</div>
+</h4>
+
+<hr>
+<!--section 2-->
+<h2 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
+Results</h2>
+
+<!--section 2.1-->
+<h3 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
+<li type="disc">	
+<b>Colorful Examples</b>
+</li></h3>
+<h4 style="text-align:justify">
+<br>
+<!--table 3-->
+ <table align="center" width="900px">
+	<tbody><tr>
+		<td width="900px"><center>
+			<a href="./materials/HD_results.png" target="_blank">
+			<img alt="" src="./materials/HD_results.jpg" style="width: 900px;"></a></center>
+			<br><br>
+        	<b>High-resolution experimental results (png)</b>
+		</center></td>
+    </tr></tbody>
+</table>
+
+<!--section 2.2-->
+<h3 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
+<li type="disc">	
+<b>Demo Video</b>
+</li></h3>
+<h4 style="text-align:justify">
+<br>
+<!--table 3-->
+ <table align="center" width="700px">
+	<tbody><tr>
+		<td width="500px"><center>
+			<iframe width="800" height="450" src="./materials/video_demo.mp4" frameborder="0" allowfullscreen=""></iframe>
+			<br><br>
+        	<b>Video demonstration on potential applications (mp4)</b>
+		</center></td>
+    </tr></tbody>
+</table>
+
+<hr>
+<!--section 3-->
+<h2 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;">
+Network and Online Interaction</h2>
+
+<!--section 3.1-->
+<h3 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
+<li type="disc">	
+<b>Interactive Demo</b>
+</li></h3>
+<h4 style="text-align:justify">
+<div style="text-indent:2em">
+<p style="line-height:120%" >
+<b>TBD</b>.</p>
+</div>
+
+<!--section 3.2-->
+<h3 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
+<li type="disc">	
+<b>Try the network</b>
+</li></h3>
+<h4 style="text-align:justify">
+<div style="text-indent:2em">
+<p style="line-height:120%">We trained our system on 13K color photos self-supervisely with the network 
+architecture shown below. Here, the training and testing code implemented withTensorFlow platform 
+are available on <a href="https://github.com/MenghanXia">Github</a>.</p>
+</div>
+<br>
+<!--table 4-->
+ <table align="center" width="700px">
+	<tbody>
+		<tr>
+			<td width="500px"><center>
+				<img alt="" src="./materials/overview.jpg" style="width: 700px;"></center>
+			<br><br>	
+			<b>Network architecture</b> <a href="https://github.com/MenghanXia"> [TensorFlow Implementation]</a>
+		</tr>
+	</tbody>
+</table>
+
+<hr>
+<!--bibtex-->
+<span style="font-size:20px"><left>
+	<a href="./materials/bibtex.txt">[Bibtex]</a>
+	<i><font size="3" color="gray">ACM Transactions on Graphics (SIGGRAPH Asia 2018 issue), Vol. xx, No. xx, November 2018, pp. xxx-xxx.</font></i>
+</left></span>
+</tbody></table>
+
+</div>
+</body>
+</html>
