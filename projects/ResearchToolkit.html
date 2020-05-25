@@ -8,7 +8,7 @@
     <meta name="author" content="">
 	<meta name="keywords" content="Edge Detection, Line Detection">
 
-    <title>Invertible Grayscale</title>
+    <title>ResearchToolkit</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -41,172 +41,90 @@
     <!-- Page Content -->
 <!-- =========================================== Content Range =========================================== -->
 <div class="container">
-			<div class="col-lg-12 text-center">
-                <span style="font-size:42px"><b>Invertible Grayscale</b></span><br><br>
-				<!--table 1-->
-				<table align="center" width="500px">
-	  			  <tbody><tr>
-	  	              <td align="center" width="140px">
-	  					<center>
-	  						<span style="font-size:18px"><a href="https://menghanxia.github.io/">Menghan Xia</a></span>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align="center" width="140px">
-	  					<center>
-	  						<span style="font-size:18px"><a href="http://appsrv.cse.cuhk.edu.hk/~xtliu/">Xueting Liu</a></span>
-		  		  		</center>
-		  		  	  </td>
-	  	              <td align="center" width="140px">
-	  					<center>
-	  						<span style="font-size:18px"><a href="http://www.cse.cuhk.edu.hk/~ttwong/">Tien-Tsin Wong</a></span>
-		  		  		</center>
-		  		  	  </td>
-	  			  </tr></tbody>
-				</table>
-				<span style="font-size:18px"><i>The Chinese University of Hong Kong (CUHK), Hong Kong</i></span>
-				<br><br>
-				<!--table 2-->
-				<table align="center" width="800px">
-					<tbody><tr>
-						<td align="center" width="150px">
-	  					<center>
-	  						<span style="font-size:20px">Code <a href="https://github.com/MenghanXia/InvertibelGrayscale"> [GitHub]</a></span>
-		  		  		</center></td>
-						<td align="center" width="300px">
-	  					<center>
-	  						<span style="font-size:20px">SIGGRAPH Asia 2018<a href="http://menghanxia.github.io/papers/2018_Invertible_Grayscale_siga.pdf"> [Paper]</a></span>
-		  		  		</center></td>
-						<td align="center" width="200px">
-	  					<center>
-	  						<span style="font-size:20px">Conference<a href="https://github.com/MenghanXia" > [Talk]</a></span>
-						</center></td>
-						<td align="center" width="150px">
-	  					<center>
-	  						<span style="font-size:20px">Slide<a href="https://github.com/MenghanXia"> [ppt]</a></span>
-		  		  		</center></td>
-					</tr></tbody>
-				</table>
-			</div>
-			
-			<!--table 3-->
-			 <table align="center" width="700px">
-				<tbody><tr>
-					<td width="700px">
-  					<center>
-  	                	<img class="rounded" src="./InvertibleGrayscale/teaser.jpg" height="300px">
-  	                	<br>
-					</center></td>
-  	            </tr></tbody>
-			</table>
+	<div class="col-lg-12 text-center">
+        <span style="font-size:36px">Useful Research/Technical Tools</span>
+        <br><br><br><br>
+    </div>
 
 <hr>
 <!--section 1-->
-<h2 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
-Abstract</h2>
-<h4 style="text-align:justify">
-<div style="text-indent:2em">
-<p style="line-height:120%">Once a color image is converted to grayscale, it is a common belief that the original color cannot be 
-fully restored, even with the state-of-the-art colorization methods. In this paper, we propose an innovative method to synthesize 
-{\em invertible grayscale}. It is a grayscale image that can fully restore its original color. The key idea here is to encode the 
-original color information into the synthesized grayscale, in a way that users cannot recognize any anomalies. 
-We propose to learn and embed the color-encoding scheme via a convolutional neural network (CNN). It consists of an encoding 
-network to convert a color image to grayscale, and a decoding network to invert the grayscale to color. 
-We then design a loss function to ensure the trained network possesses three required properties: (a) color invertibility, 
-(b) grayscale conformity,  and (c) resistance to quantization error. We have conducted intensive quantitative experiments 
-and user studies over a large amount of color images to validate the proposed method. Regardless of the genre and content 
-of the color input, convincing results are obtained in all cases..</p>
-</div>
+<hr>
+<h3><i>Inspiring Research</i></h3>
+<hr>
+<!--topic 1-->
+<h4 style="line-height:150%;text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 0px;padding-bottom: 20px;">
+ <ul><li type="spics">
+    <a href="https://arxiv.org/abs/1907.02392">
+    "Guided Image Generation with Conditional Invertible Neural Networks"</a>, arXiv 2019. <br>
+    <p style="line-height:120%">No remarks.</p>
+</li>
+ <li type="spics">
+    <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Flynn_DeepView_View_Synthesis_With_Learned_Gradient_Descent_CVPR_2019_paper.pdf">
+    "DeepView: View synthesis with learned gradient descent"</a>, CVPR 2019. <br>
+    <p style="line-height:120%">No remarks.</p>
+</li>
+</ul>
+
 </h4>
 
-<hr>
+
 <!--section 2-->
-<h2 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
-Results</h2>
-
-<!--section 2.1-->
-<h3 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
-<li type="disc">	
-<b>Colorful Examples</b>
-</li></h3>
-<h4 style="text-align:justify">
-<br>
-<!--table 3-->
- <table align="center" width="900px">
-	<tbody><tr>
-		<td width="900px"><center>
-			<a href="./InvertibleGrayscale/HD_results.png" target="_blank">
-			<img alt="" src="./InvertibleGrayscale/HD_results.jpg" style="width: 900px;"></a></center>
-			<br><br>
-        	<b>High-resolution experimental results (png)</b>
-		</center></td>
-    </tr></tbody>
-</table>
-
-<!--section 2.2-->
-<h3 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
-<li type="disc">	
-<b>Demo Video</b>
-</li></h3>
-<h4 style="text-align:justify">
-<br>
-<!--table 3-->
- <table align="center" width="700px">
-	<tbody><tr>
-		<td width="500px"><center>
-			<iframe width="800" height="450" src="./InvertibleGrayscale/video_demo.mp4" frameborder="0" allowfullscreen=""></iframe>
-			<br><br>
-        	<b>Video demonstration on potential applications (mp4)</b>
-		</center></td>
-    </tr></tbody>
-</table>
-
+<h3 ><i>Useful Technics</i></h3>
 <hr>
-<!--section 3-->
-<h2 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;">
-Network and Online Interaction</h2>
+<!--topic 1-->
+<h4 style="line-height:150%;text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 0px;padding-bottom: 20px;">
+ <li type="square">
+<b>Differentiable Quantization</b>
+</li>
+    <ol>
+        <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9010945">
+	        "Differentiable Soft Quantization:Bridging Full-Precision and Low-Bit Neural Networks"</a>, ICCV 2019. <br>
+            <p style="line-height:120%">No remarks.</p>
+        </li>
+        <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8578437">
+	        "Learning Convolutional Networks for Content-weighted Image Compression"</a>, CVPR 2018. <br>
+            <p style="line-height:120%">No remarks.</p>
+        </li>
+        <li><a href="https://machine-learning-and-security.github.io/papers/mlsec17_paper_54.pdf">
+	        "JPEG-resistant Adversarial Images"</a>, NIPS Workshops 2017. <br>
+            <p style="line-height:120%">No remarks.</p>
+        </li>
+        <li><a href="https://eccv2018.org/openaccess/content_ECCV_2018/papers/Jiren_Zhu_HiDDeN_Hiding_Data_ECCV_2018_paper.pdf">
+	        "HiDDeN: Hiding Data With Deep Networks"</a>, ECCV 2018. <br>
+            <p style="line-height:120%">No remarks.</p>
+        </li>
+    
+    </ol>
 
-<!--section 3.1-->
-<h3 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
-<li type="disc">	
-<b>Interactive Demo</b>
-</li></h3>
-<h4 style="text-align:justify">
-<div style="text-indent:2em">
-<p style="line-height:120%" >
-<b>Coming in some day</b>.</p>
-</div>
-
-<!--section 3.2-->
-<h3 style="text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 20px;padding-bottom: 20px;">
-<li type="disc">	
-<b>Try the network</b>
-</li></h3>
-<h4 style="text-align:justify">
-<div style="text-indent:2em">
-<p style="line-height:120%">We trained our system on 13K color photos self-supervisely with the network 
-architecture shown below. Here, the training and testing code implemented withTensorFlow platform 
-are available on <a href="https://github.com/MenghanXia/InvertibelGrayscale">Github</a>.</p>
-</div>
-<br>
-<!--table 4-->
- <table align="center" width="700px">
-	<tbody>
-		<tr>
-			<td width="500px"><center>
-				<img alt="" src="./InvertibleGrayscale/overview.jpg" style="width: 700px;"></center>
-			<br><br>	
-			<b>Network architecture</b> <a href="https://github.com/MenghanXia/InvertibelGrayscale"> [TensorFlow Implementation]</a>
-		</tr>
-	</tbody>
-</table>
-
-<hr>
-<!--bibtex-->
-<span style="font-size:20px"><left>
-	<a href="./InvertibleGrayscale/bibtex.txt">[Bibtex]</a>
-	<i><font size="3" color="gray">ACM Transactions on Graphics (SIGGRAPH Asia 2018 issue), Vol. 37, No. 6, Article 246. November 2018.</font></i>
-</left></span>
-</tbody></table>
+<!--topic 2-->
+ <li type="square">
+<b>Differentiable L0 Norm Regularity</b>
+</li>
+    <ol>
+        <li><a href="https://openreview.net/pdf?id=H1Y8hhg0b">
+	        "Learning Sparse Neural Networks through L0 Regularization"</a>, ICLR 2018. <br>
+            <p style="line-height:120%">No remarks.</p>
+        </li>
+        <li><a href="http://www.stats.ox.ac.uk/~cmaddis/pubs/concrete.pdf">
+	        "The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables"</a>, ICLR 2017. <br>
+            <p style="line-height:120%">No remarks.</p>
+        </li>
+    
+    </ol>
+ 
+<!--topic 3-->
+ <li type="square">
+<b>Soft Argmax</b>
+</li>
+    <ol>
+        <li><a href="https://link.springer.com/content/pdf/10.1007/s10791-009-9110-3.pdf">
+	        "Gradient descent optimization of smoothed information retrieval metrics"</a>, Information Retrieval 2010. <br>
+            <p style="line-height:120%">No remarks.</p>
+        </li>
+    
+    </ol>
+  
+</h4>
 
 </div>
 </body>
