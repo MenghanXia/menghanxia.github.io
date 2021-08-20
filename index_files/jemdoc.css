@@ -142,6 +142,15 @@ icon {
 	color: #008080;
 }
 
+button {
+	font-family: "Cambria";
+	font-size: 90%;
+	color: #008080;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	border: thin solid #008080;
+}
+
 
 h1, h2, h3 {
 	color: #527bbd;
