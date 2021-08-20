@@ -17,7 +17,8 @@ html {
 }
 
 body { 
-  font-family: Georgia, serif;
+  font-family: Cambria, serif;
+  font-size: 110%;
   color: #000;
   background-color: #ffffff; 
   text-align:left; /* for IE */
@@ -135,15 +136,16 @@ strong {
 }
 
 icon {
-	font-family: "Calibri (Body)";
-	font-size: 90%;
-	font-weight: bolder;
+	font-family: "Cambria";
+	font-size: 100%;
+	font-weight: bold;
 	color: #008080;
 }
 
 
 h1, h2, h3 {
 	color: #527bbd;
+	font-family: "Cambria";
 	margin-top: 0.7em;
 	margin-bottom: 0.5em;
 	padding-bottom: 0.2em;
@@ -171,7 +173,18 @@ h3 {
 	border-bottom: none;
 }
 
+pz {
+    font-family: Cambria, serif;
+    font-size: 105%;
+	margin-top: 0.0em;
+	margin-bottom: 0.8em;
+	padding: 0;
+	line-height: 1.3;
+}
+
 p {
+    font-family: Cambria, serif;
+    font-size: 100%;
 	margin-top: 0.0em;
 	margin-bottom: 0.8em;
 	padding: 0;
