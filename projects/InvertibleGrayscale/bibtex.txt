@@ -1,9 +1,0 @@
-@article{xxx,
-  title={Invertible Grayscale},
-  author={Menghan Xia and Xueting Liu and Tien-Tsin Wong},
-  journal={ACM Transactions on Graphics (TOG)},
-  volume={xx},
-  number={xx},
-  year={2018},
-  publisher={ACM}
-}
