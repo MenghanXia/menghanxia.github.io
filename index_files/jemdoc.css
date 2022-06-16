@@ -153,7 +153,7 @@ button {
 }
 
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	color: #527bbd;
 	font-family: "Cambria";
 	margin-top: 0.7em;
@@ -179,6 +179,13 @@ h2 + h3 {
 }
 
 h3 {
+	font-size: 110%;
+	border-bottom: none;
+}
+
+
+h4 {
+	color: #000000;
 	font-size: 110%;
 	border-bottom: none;
 }
