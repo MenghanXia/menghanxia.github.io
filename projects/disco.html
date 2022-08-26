@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://shangchenzhou.com/projects/CodeFormer/ -->
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title>DISCO</title>
+  <link rel="shortcut icon" href="./disco/favicon.ico">
+  <link rel="stylesheet" href="./disco/project.css">
+  <link rel="stylesheet" href="./disco/bootstrap.min.css">
+</head>
+<body>
+  <div id="content" style="line-height:150%;text-align:left padding-bottom: 20px;border-top-width: 20px;padding-top: 0px;padding-bottom: 20px;">
+    <div class="head" style="background-color:rgba(255,255,255,0.95)">
+      <h1>
+        DISCO: <font color="Tomato">Dis</font>entangled Image <font color="Tomato">Co</font>lorization via Global Anchors
+      </h1>
+      <!--=================Authors==========================-->
+      <div class="authors">
+        <a href="https://menghanxia.github.io/" target="_blank">Menghan Xia<sup>1</sup></a> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://wbhu.github.io/" target="_blank">Wenbo Hu<sup>2</sup></a> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="http://www.cse.cuhk.edu.hk/~ttwong/" target="_blank">Tien-Tsin Wong<sup>2</sup></a> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://juewang725.github.io/" target="_blank">Jue Wang<sup>1</sup></a>
+      </div>
+      <div class="affiliations ">Tencent AI Lab<sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp; The Chinese University of Hong Kong<sup>2</sup></div>
+      <div class="venue ">ACM Transactions on Graphics (Special issue on SIGGRAPH Asia 2022)</div>
+    </div> <!-- .head -->
+	<hr>
+		
+    <!--=================Materials==========================-->
+    <div class="section">
+      <div class="row">
+        <div class="col-3 text-center">
+            <a href="https://menghanxia.github.io/" target="_blank" class="imageLink"><img src="./disco/paper.png" ,="" height="100"></a><br><br>
+            <a href="https://menghanxia.github.io/" target="_blank">Paper (coming soon)</a>
+        </div>
+        <div class="col-3 text-center">
+            <a href="https://menghanxia.github.io/" target="_blank" class="imageLink"><img src="./disco/logo.png" ,="" height="100"></a><br><br>
+            <a href="https://menghanxia.github.io/" target="_blank">Online Demo (coming soon)</a>
+        </div>
+        <div class="col-3 text-center">
+            <a href="https://github.com/MenghanXia/DisentangledColorization" target="_blank" class="imageLink"><img src="./disco/icon_github.png" ,="" height="100"></a><br><br>
+              <a href="https://github.com/MenghanXia/DisentangledColorization" target="_blank">Codes (Github)</a>
+        </div>
+        <div class="col-3 text-center">
+            <a href="https://drive.google.com/file/d/1g05U86QGqnlN_v9SRRKDTU8033yvQNEa/view?usp=sharing" target="_blank" class="imageLink"><img src="./disco/icon_dataset.png" ,="" height="100"></a><br>
+            Evaluation Results<br>
+            (<a href="https://1drv.ms/u/s!Al07CQ4AbykHkjItNln63Hh42lWz?e=bwSQDf" target="_blank">COCO5k</a> | <a href="https://1drv.ms/u/s!Al07CQ4AbykHkjItNln63Hh42lWz?e=bwSQDf" target="_blank">ImageNet10k</a>)
+        </div>
+      </div> <!-- .row -->
+    </div> <!-- .section -->
+
+    <!--=================Abstract==========================-->
+    <div id="abstract" class="section">
+      <h2>Abstract</h2>
+      <p>Colorization is multimodal by nature and challenges existing frameworks to achieve colorful and structurally consistent results. Even the sophisticated autoregressive model struggles to maintain long-distance color consistency due to the fragility of sequential dependence.
+	  To overcome this challenge, <b>we propose a novel colorization framework that disentangles color multimodality and structure consistency through global color anchors, so that both aspects could be learned effectively.</b> Our key insight is that several carefully located anchors could approximately represent the color distribution of an image, and conditioned on the anchor colors, we can predict the image color in a deterministic manner by utilizing internal correlation. To this end, we construct a colorization model with dual branches, where the color modeler predicts the color distribution for anchor color representation, and the color generator predicts the pixel colors by referring the sampled anchor colors. Importantly, the anchors are located under two principles: color independence and global coverage, which is realized with clustering analysis on the deep color features. To simplify the computation, we creatively adopt soft superpixel segmentation to reduce the image primitives, which still nicely reserves the reversibility to pixel-wise representation.
+      Extensive experiments show that our method achieves notable superiority over various mainstream frameworks in perceptual quality. Thanks to anchor-based color representation, our model has the flexibility to support diverse and controllable colorization as well.</p>
+    </div> <!-- .section -->
+
+    <!--=================Method==========================-->
+    <div id="method" class="section">
+      <h2>Method</h2>
+      <p>
+      Given a grayscale input G, we extract the feature map F and the local affinity association map A at feature extraction stage. Then, the tokenized backbone feature F′ is used for anchor-based color modeling and anchor-guided color generation respectively. Particularly, the anchors are adaptively located by the anchor locator. At last, by pixel-level refinement, we obtain the color output C. ⊙ denotes Hadamard product and ⊕ denotes concatenation along the channel axis.</p>
+      <img src="./disco/network.png">
+      <h5 class="text-center">Model overview</h5>
+    </div> <!-- .section -->
+    
+
+    <div id="results" class="section">
+      <h2>Results</h2>
+	  <p>Most colorization methods work quite well on natural scenes, since vegetation, sky, lake/sea and animals have little color ambiguity. In contrast, man-made scenes, such as human clothes, vehicles, sport facilities, and daily articles, may present diverse colors potentially and thus are more challenging to obtain visually plausible results. This is just what our method targets for tackling, so we mainly evaluate on man-made scenes.</p>
+	  
+	  <p><b>Automatic colorization methods</b> include:<a href="https://github.com/richzhang/colorization" target="_blank">CIColor</a>, <a href="https://github.com/pvitoria/ChromaGAN" target="_blank">ChromaGAN</a>, <a href="https://github.com/richzhang/colorization" target="_blank">UGColor</a>, <a href="https://github.com/ericsujw/InstColorization" target="_blank">InstColor</a>, <a href="https://github.com/jantic/DeOldify" target="_blank">Deoldify</a>, <a href="https://github.com/google-research/google-research/tree/master/coltran" target="_blank">ColTran</a>, for which we use their official implementation and pretrained models for comparison. For inference, the input grayscale image is first resized to 256x256 before fed to the model and the output chromatice channels are bilinearly rescaled back to the original resolution, which together with the orginal input are converted to the final colorized RGB image. For more results, we provide <b>the full set of showcase examples</b> at <a href="https://drive.google.com/file/d/1aadVJ1sjIqUTZYJymu3TLQ5AfYBFUHCD/view?usp=sharing" target="_blank">GoogleDrive</a> | <a href="https://1drv.ms/u/s!Al07CQ4AbykHkjFmNK9AxBqF046z?e=owZP2n" target="_blank">OneDrive</a>.
+	  </p>
+	  <br>
+	  <table width="100%" cellspacing="1" align="center">
+	  <tr font face="DFKai-sb">
+	  <td align=center width="13%">Input</td>
+	  <td align=center width="13%">UGColor</td>
+	  <td align=center width="13%">InstColor</td>
+	  <td align=center width="13%">Deoldify</td>
+	  <td align=center width="13%">ColTran</td>
+	  <td align=center width="13%"><b>Ours</b></td>
+	  <td align=center width="15%">Ground truth</td>
+	  </tr>
+	  </table>
+	  <div style= "overflow-y:scroll;height:500px;">
+      <img src="./disco/showcase.jpg">
+	  </div>
+    </div> <!-- .section -->
+	 
+
+    <!--=================Citation==========================-->
+    <div id="material" class="section">
+      <h2>Materials</h2>
+      <p>For the convenience of further research or evaluation, we provide the <a href="https://github.com/MenghanXia/DisentangledColorization" target="_blank">implementation of the evaluation metrics</a> used in our paper. <i>Coming soon!</i></p>
+    </div> <!-- .section -->
+	
+
+    <!--=================Citation==========================-->
+    <div id="citation" class="section">
+      <h2>Citation</h2>
+      <p>If you find our dataset and paper useful for your research, please consider citing our work:</p>
+      <pre>@article{xia2022disco,
+		author = {Menghan Xia and Wenbo Hu and Tien-Tsin Wong and Jue Wang},
+		title = {Disentangled Image Colorization via Global Anchors},
+		journal = {ACM Transactions on Graphics (SIGGRAPH Asia 2022 issue)},
+		year = {2022}
+	  }</pre>
+    </div> <!-- .section -->
+	
+</div>
+</body></html>
