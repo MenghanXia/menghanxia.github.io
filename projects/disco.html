@@ -26,7 +26,7 @@
         <a href="https://juewang725.github.io/" target="_blank">Jue Wang<sup>1</sup></a>
       </div>
       <div class="affiliations ">Tencent AI Lab<sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp; The Chinese University of Hong Kong<sup>2</sup></div>
-      <div class="venue ">ACM Transactions on Graphics (Special issue on SIGGRAPH Asia 2022)</div>
+      <div class="venue ">ACM Transactions on Graphics (Special issue of SIGGRAPH Asia 2022)</div>
     </div> <!-- .head -->
 	<hr>
 		
@@ -35,20 +35,20 @@
       <div class="row">
         <div class="col-3 text-center">
             <a href="https://menghanxia.github.io/" target="_blank" class="imageLink"><img src="./disco/paper.png" ,="" height="100"></a><br><br>
-            <a href="https://menghanxia.github.io/" target="_blank">Paper (<font color="#FF0000">coming soon</font>)</a>
-        </div>
-        <div class="col-3 text-center">
-            <a href="https://menghanxia.github.io/" target="_blank" class="imageLink"><img src="./disco/logo.png" ,="" height="100"></a><br><br>
-            <a href="https://menghanxia.github.io/" target="_blank">Online Demo (<font color="#FF0000">coming soon</font>)</a>
-        </div>
-        <div class="col-3 text-center">
-            <a href="https://github.com/MenghanXia/DisentangledColorization" target="_blank" class="imageLink"><img src="./disco/icon_github.png" ,="" height="100"></a><br><br>
-              <a href="https://github.com/MenghanXia/DisentangledColorization" target="_blank">Codes (Github)</a>
+            Paper | Supp (<font color="#FF0000">coming soon</font>)</a>
         </div>
         <div class="col-3 text-center">
             <a href="https://1drv.ms/u/s!Al07CQ4AbykHkjItNln63Hh42lWz?e=bwSQDf" target="_blank" class="imageLink"><img src="./disco/icon_dataset.png" ,="" height="100"></a><br>
             Evaluation Results<br>
             (<a href="https://1drv.ms/u/s!Al07CQ4AbykHkjItNln63Hh42lWz?e=bwSQDf" target="_blank">COCO5k</a> | <a href="https://1drv.ms/u/s!Al07CQ4AbykHkjItNln63Hh42lWz?e=bwSQDf" target="_blank">ImageNet10k</a>)
+        </div>
+        <div class="col-3 text-center">
+            <a href="https://github.com/MenghanXia/DisentangledColorization" target="_blank" class="imageLink"><img src="./disco/icon_github.png" ,="" height="100"></a><br><br>
+              <a href="https://github.com/MenghanXia/DisentangledColorization" target="_blank">Codes & Model</a>
+        </div>
+        <div class="col-3 text-center">
+            <a href="https://menghanxia.github.io/" target="_blank" class="imageLink"><img src="./disco/logo.png" ,="" height="100"></a><br><br>
+            Online Demo (<font color="#FF0000">coming soon</font>)</a>
         </div>
       </div> <!-- .row -->
     </div> <!-- .section -->
@@ -73,9 +73,9 @@
 
     <div id="results" class="section">
       <h2>Results</h2>
-	  <p>Most colorization methods work quite well on natural scenes, since vegetation, sky, lake/sea and animals have little color ambiguity. In contrast, man-made scenes, such as human clothes, vehicles, sport facilities, and daily articles, may present diverse colors potentially and thus are more challenging to obtain visually plausible results. This is just what our method targets for tackling, so we mainly evaluate on man-made scenes.</p>
-	  
-	  <p><b>Automatic colorization methods</b> include:<a href="https://github.com/richzhang/colorization" target="_blank">CIColor</a>, <a href="https://github.com/pvitoria/ChromaGAN" target="_blank">ChromaGAN</a>, <a href="https://github.com/richzhang/colorization" target="_blank">UGColor</a>, <a href="https://github.com/ericsujw/InstColorization" target="_blank">InstColor</a>, <a href="https://github.com/jantic/DeOldify" target="_blank">Deoldify</a>, <a href="https://github.com/google-research/google-research/tree/master/coltran" target="_blank">ColTran</a>, for which we use their official implementation and pretrained models for comparison. For inference, the input grayscale image is first resized to 256x256 before fed to the model and the output chromatice channels are bilinearly rescaled back to the original resolution, which together with the orginal input are converted to the final colorized RGB image. For more results, we provide <b>the full set of showcase examples</b> at <a href="https://drive.google.com/file/d/1aadVJ1sjIqUTZYJymu3TLQ5AfYBFUHCD/view?usp=sharing" target="_blank">GoogleDrive</a> | <a href="https://1drv.ms/u/s!Al07CQ4AbykHkjFmNK9AxBqF046z?e=owZP2n" target="_blank">OneDrive</a>.
+	  <p>Comparing to natural scenes that usually have little color ambiguity, man-made scenes, such as human clothes, vehicles, sport facilities, and daily articles, may present diverse colors potentially and thus are more challenging to colorization algorithms. Here we mainly illustrate results on such scenes in comparison with <b>existing colorization methods</b>:<a href="https://github.com/richzhang/colorization" target="_blank">CIColor</a>, <a href="https://github.com/pvitoria/ChromaGAN" target="_blank">ChromaGAN</a>, <a href="https://github.com/richzhang/colorization" target="_blank">UGColor</a>, <a href="https://github.com/ericsujw/InstColorization" target="_blank">InstColor</a>, <a href="https://github.com/jantic/DeOldify" target="_blank">Deoldify</a>, <a href="https://github.com/google-research/google-research/tree/master/coltran" target="_blank">ColTran</a>, for which we use their official implementation and pretrained models for comparison.</p>
+
+	  <p>For inference, the input grayscale image is first resized to 256x256 before fed to the model and the output chromatice channels are bilinearly rescaled back to the original resolution, which together with the orginal input are converted to the final colorized RGB image.
 	  </p>
 	  <br>
 	  <table width="100%" cellspacing="1" align="center">
@@ -98,7 +98,9 @@
     <!--=================Citation==========================-->
     <div id="material" class="section">
       <h2>Materials</h2>
-      <p>For the convenience of further research or evaluation, we provide the <a href="https://github.com/MenghanXia/DisentangledColorization" target="_blank">implementation of the evaluation metrics</a> used in our paper. <font color="#FF0000"><i>Coming soon!</i></font></p>
+	  <P><b>Full set of case comparison</b>: <a href="https://drive.google.com/file/d/1aadVJ1sjIqUTZYJymu3TLQ5AfYBFUHCD/view?usp=sharing" target="_blank">GoogleDrive</a> | <a href="https://1drv.ms/u/s!Al07CQ4AbykHkjFmNK9AxBqF046z?e=owZP2n" target="_blank">OneDrive</a></P>
+	  <P><b>Our results on dataset</b>: <a href="https://1drv.ms/u/s!Al07CQ4AbykHkjItNln63Hh42lWz?e=bwSQDf" target="_blank">COCO5k</a> | <a href="https://1drv.ms/u/s!Al07CQ4AbykHkjItNln63Hh42lWz?e=bwSQDf" target="_blank">ImageNet10k</a> </P>
+      <p><b>Evaluation metrics</b>: Python Implementation <font color="#FF0000"><i>Coming soon!</i></font></p>
     </div> <!-- .section -->
 	
 
