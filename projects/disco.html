@@ -52,7 +52,12 @@
         </div>
       </div> <!-- .row -->
     </div> <!-- .section -->
-
+	
+    <div id="teaser" class="section">
+	<br>
+	<img src="./disco/teaser.jpg">
+	</div>
+	
     <!--=================Abstract==========================-->
     <div id="abstract" class="section">
       <h2>Abstract</h2>
@@ -75,7 +80,7 @@
       <h2>Results</h2>
 	  <p>Comparing to natural scenes that usually have little color ambiguity, man-made scenes, such as human clothes, vehicles, sport facilities, and daily articles, may present diverse colors potentially and thus are more challenging to colorization algorithms. Here we mainly illustrate results on such scenes in comparison with <b>existing colorization methods</b>:<a href="https://github.com/richzhang/colorization" target="_blank">CIColor</a>, <a href="https://github.com/pvitoria/ChromaGAN" target="_blank">ChromaGAN</a>, <a href="https://github.com/richzhang/colorization" target="_blank">UGColor</a>, <a href="https://github.com/ericsujw/InstColorization" target="_blank">InstColor</a>, <a href="https://github.com/jantic/DeOldify" target="_blank">Deoldify</a>, <a href="https://github.com/google-research/google-research/tree/master/coltran" target="_blank">ColTran</a>, for which we use their official implementation and pretrained models for comparison.</p>
 
-	  <p>For inference, the input grayscale image is first resized to 256x256 before fed to the model and the output chromatice channels are bilinearly rescaled back to the original resolution, which together with the orginal input are converted to the final colorized RGB image.
+	  <p>For inference, the input grayscale image is first resized to 256x256 before fed to the model and the output chromatic channels are bilinearly rescaled to the orginal resolution, which together makes the colorized RGB image. Below illustrates a subset of our comparative cases.
 	  </p>
 	  <br>
 	  <table width="100%" cellspacing="1" align="center">

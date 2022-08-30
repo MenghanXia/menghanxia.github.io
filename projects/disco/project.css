@@ -1,9 +1,9 @@
 html,
 body {
-  margin: 10px 0px;
+  margin: 0px 0px 0px;
   padding: 0px;
   text-align: center;
-  /*background-color: #EEEEEE;*/
+  background: radial-gradient(ellipse at bottom, #D6EAF8 0%, #FDFEFE 100%);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   -webkit-text-size-adjust: none;
 }
@@ -43,11 +43,12 @@ pre {
   -webkit-text-size-adjust: none;
 }
 
-#teaseimg {
+#teaserimg {
   height: auto;
-  width: 50%;
+  width: 80%;
   box-shadow: 0px 0px 10px #444444;
-  border: 1px solid #000000;
+  border: 0px solid #000000;
+  text-align: center;
 }
 
 .head {
