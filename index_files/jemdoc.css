@@ -144,18 +144,20 @@ icon {
 
 button {
 	font-family: "Cambria";
-	font-size: 90%;
+	font-size: 100%;
 	color: #008080;
-	padding-left: 0.3em;
-	padding-right: 0.3em;
-	border: thin solid #008080;
-	cursor:pointer;
+	background-color: #e7e7e7;
+	border-color:#e7e7e7;
+    margin: 3px;  
+    padding: 1 8px;
+    border-radius: 6px;
+	cursor:pointer;  
 }
 
 
 h1, h2, h3, h4 {
 	color: #527bbd;
-	font-family: "Cambria";
+	font-family: "Comic sans MS";
 	margin-top: 0.7em;
 	margin-bottom: 0.5em;
 	padding-bottom: 0.2em;
