@@ -146,10 +146,9 @@ button {
 	font-family: "Comic sans MS";
 	font-size: 90%;
 	color: #008080;
-	background-color: #e7e7e7;
-	border-color:#e7e7e7;
-    margin: 3px;  
-    padding: 1 8px;
+	border:none;
+	margin: 5px 10px 0px 0px;
+    padding: 3 8px;
     border-radius: 6px;
 	cursor:pointer;  
 }
