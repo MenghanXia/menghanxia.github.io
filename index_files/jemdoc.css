@@ -143,16 +143,23 @@ icon {
 }
 
 button {
-	font-family: "Comic sans MS";
-	font-size: 90%;
+	font-family: "Cambria";
+	font-size: 100%;
 	color: #008080;
-	border:none;
+	background-color: #F2F3F4;
+	border: none;
 	margin: 5px 10px 0px 0px;
     padding: 3 8px;
     border-radius: 6px;
-	cursor:pointer;  
+	display: inline-block;
+	cursor:pointer;
+	transition-duration: 0.2s;
 }
 
+button:hover {
+  background-color: #F8C471;
+  color: white;
+}
 
 h1, h2, h3, h4 {
 	color: #527bbd;
