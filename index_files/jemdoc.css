@@ -135,6 +135,13 @@ strong {
 	font-weight: bold;
 }
 
+mark {
+	font-family: "Cambria";
+	font-size: 100%;
+	font-style: italic;
+	color: #DE3163;
+}
+
 icon {
 	font-family: "Cambria";
 	font-size: 100%;
@@ -157,7 +164,7 @@ button {
 }
 
 button:hover {
-  background-color: #F8C471;
+  background-color: #9FE2BF;
   color: white;
 }
 
