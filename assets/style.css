@@ -1,0 +1,298 @@
+/* Acknowledgement: CSS tempolate is adapted from source: https://shurans.github.io/ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+b, u, i, center,
+dl, dt, dd, ol, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**************************************************/
+
+#header {
+	background-color: #FFFFFF;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    /*left: 0;*/
+    width: 1000px;
+	text-align: right;
+	position: fixed;
+}
+
+#header a {
+    text-decoration: none;
+    border-bottom: none;
+    color: #a0a8b0;
+}
+
+#header a:hover {
+    color: #FF6666;
+}
+
+/**************************************************/
+
+#main {
+    width: 1000px;
+    margin: 0px auto;
+}
+
+#body{
+    font-family: "Cambria", serif;
+    /*color: #a0a8b0;*/
+    /*color: #191e3f;*/
+	color: #5D6D7E;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 26px;
+    width: 100%;
+    margin: 0px auto 20px 0px;
+    color: #003373;
+}
+
+h3 {
+    font-size: 22px;
+    color: #49bf9d;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+	margin-top: 0.0em;
+	margin-bottom: 0.8em;
+	padding: 0;
+	line-height: 1.3;
+	text-align: justify;
+}
+
+ul {
+    font-size: 14px;
+    line-height: 24px;
+    list-style-position: inside;
+    list-style-type: disc;
+    margin-bottom: 30px;
+    color: #a0a8b0;
+}
+
+a {
+    text-decoration: none;
+    color: #4a85c8;
+}
+
+a:hover {
+	color: #FF6666;
+}
+
+i {
+    font-style: italic;
+}
+
+/**************************************************/
+
+#profile {
+    padding: 30px 30px 10px 30px;
+    border-bottom: 1px dashed #ddd;
+}
+
+#profile-pic {
+    float: left;
+    margin-right: 40px;
+    text-align: center;
+}
+
+#profile img {
+    width: 250px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+#profile-name {
+    font-size: 30px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    color: #003373;
+}
+
+#profile-position {
+    font-size: 22px;
+	/*font-style: italic;*/
+    line-height: 20px;
+    margin-bottom: 20px;
+    color: #666666;
+}
+
+#profile p {
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+
+#news {
+    padding: 30px 30px 10px 30px;
+    border-bottom: 1px dashed #ddd;
+}
+
+
+#research {
+    padding: 30px 30px 10px 30px;
+    border-bottom: 1px dashed #ddd;
+}
+
+
+#misc {
+    padding: 30px 30px 10px 30px;
+}
+
+
+/**************************************************/
+
+
+#repBtn {
+    color: #49bf9d;
+    display: inline;
+    text-decoration: none;
+}
+
+#repBtn a {
+    color: inherit;
+}
+
+#repBtn a:hover {
+    color: #49bf9d;
+}
+
+#showAllBtn {
+    color: #a0a8b0;
+    display: inline;
+    text-decoration: none;
+}
+
+#showAllBtn a {
+    color: inherit;
+}
+
+#showAllBtn a:hover {
+    color: #49bf9d;
+}
+
+/**************************************************/
+
+.divider {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-item {
+    color: #003373;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/**************************************************/
+
+.research-proj {
+    width: 100%;
+    display: table;
+
+}
+
+.research-thumb {
+    width: 200px;
+    float: left;
+    margin-top: 7px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+}
+
+.research-thumb:hover {
+    border-bottom: none;
+}
+
+.research-thumb img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.research-thumb video {
+  margin-top: 0.4em;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.research-proj-title {
+    color: #006699;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.research-proj p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.research-proj p strong {
+    color: #666666;
+    font-weight: 700;
+}
+
+.bottom {
+    font-family: "Gabriola";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+.bottom::before {
+    background: linear-gradient(90deg, transparent 0%, #e6e6e6 10%);
+}
+.bottom::before,
+.bottom::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 1px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.bottom::after {
+    background: linear-gradient(270deg, transparent 0%, #e6e6e6 10%);
+}
+.info {
+    color: #999999;
+    font-size: 18px;
+    padding: 0 0.5em;
+}
