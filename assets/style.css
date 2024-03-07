@@ -39,10 +39,11 @@ table {
 
 #header {
 	background-color: #FFFFFF;
+	opacity: 0.5;
     height: 50px;
-    font-size: 20px;
+    font-size: 25px;
     line-height: 50px;
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
     /*left: 0;*/
     width: 1000px;
 	text-align: right;
@@ -52,7 +53,7 @@ table {
 #header a {
     text-decoration: none;
     border-bottom: none;
-    color: #a0a8b0;
+    color: #708090;
 }
 
 #header a:hover {
@@ -127,9 +128,10 @@ i {
 }
 
 #profile-pic {
-    float: left;
-    margin-right: 40px;
+    float: right;
+    margin-left: 40px;
     text-align: center;
+    margin-top: 60px;
 }
 
 #profile img {
@@ -270,7 +272,7 @@ i {
 }
 
 .bottom {
-    font-family: "Gabriola";
+    font-family: "Comic sans MS";
     display: flex;
     align-items: center;
     justify-content: center;
