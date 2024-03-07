@@ -79,7 +79,7 @@ h1 {
     line-height: 30px;
     width: 100%;
     margin: 0px auto 20px 0px;
-    color: #003373;
+    color: #5D6D7E;
 }
 
 h3 {
@@ -142,9 +142,10 @@ i {
 
 #profile-name {
     font-size: 35px;
+	font-weight: bold;
     line-height: 24px;
     margin-bottom: 24px;
-    color: #003373;
+	color: #5D6D7E;
     text-align: center;
 }
 
@@ -256,7 +257,6 @@ i {
   height: 100%;
 }
 .research-proj-title {
-    color: #006699;
     font-size: 20px;
     line-height: 26px;
 }
