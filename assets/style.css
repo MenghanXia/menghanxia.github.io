@@ -272,7 +272,7 @@ i {
 }
 
 .bottom {
-    font-family: "Comic sans MS";
+    font-family: "Cambria", serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -299,4 +299,10 @@ i {
     color: #999999;
     font-size: 18px;
     padding: 0 0.5em;
+}
+.info a {
+    color: #999999;
+}
+.info a:hover {
+    color: #FF6666;
 }
