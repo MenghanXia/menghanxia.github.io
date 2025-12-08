@@ -233,6 +233,15 @@ i {
     line-height: 28px;
 }
 
+.highlighted-text {
+    color: #E04B3E; 
+    background-color: #FFFACD; 
+    padding: 0px 3px; 
+    border-radius: 5px; 
+    font-style: italic;
+    display: inline-block; 
+}
+
 /**************************************************/
 
 .research-proj {
